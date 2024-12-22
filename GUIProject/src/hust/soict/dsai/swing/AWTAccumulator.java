@@ -13,7 +13,7 @@ public class AWTAccumulator extends Frame {
         // Thiết lập giao diện
         setLayout(new GridLayout(2, 2));
 
-        // Ô nhập liệu
+       
         add(new Label("Enter an integer: "));
         tfInput = new TextField(10);
         add(tfInput);

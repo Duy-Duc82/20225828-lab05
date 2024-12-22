@@ -11,7 +11,7 @@ public class NumberGrid extends JFrame {
     private JTextField tfDisplay;
 
     public NumberGrid() {
-        // Thiết lập JFrame
+       
         setTitle("Number Grid");
         setSize(300, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

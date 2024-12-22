@@ -11,7 +11,7 @@ public class SwingAccumulator extends JFrame {
     private int sum = 0; // Tổng tích lũy ban đầu là 0
 
     public SwingAccumulator() {
-        // Thiết lập JFrame
+       
         setTitle("Swing Accumulator");
         setSize(350, 150);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

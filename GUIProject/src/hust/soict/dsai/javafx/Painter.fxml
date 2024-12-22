@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="hust.soict.dsai.javafx.PainterController">
+
+    <left>
+        <VBox spacing="10" alignment="CENTER">
+            <RadioButton text="Pen" fx:id="penTool" selected="true" />
+            <RadioButton text="Eraser" fx:id="eraserTool" />
+            <ColorPicker fx:id="colorPicker" />
+            <Slider fx:id="brushSizeSlider" min="2" max="20" value="4" />
+            <Button text="Clear" onAction="#clearButtonPressed" />
+            <Button text="Save" onAction="#saveCanvas" />
+        </VBox>
+    </left>
+
+    <center>
+        <Pane fx:id="drawingAreaPane" style="-fx-background-color: white;" onMouseDragged="#drawingAreaMouseDragged" />
+    </center>
+</BorderPane>

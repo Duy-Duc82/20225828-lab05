@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="hust.soict.dsai.javafx.CartController">
+    <center>
+        <TableView fx:id="cartTable">
+            <columns>
+                <TableColumn text="Name" fx:id="nameColumn" />
+                <TableColumn text="Price" fx:id="priceColumn" />
+                <TableColumn text="Quantity" fx:id="quantityColumn" />
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox spacing="10" alignment="CENTER" BorderPane.alignment="CENTER">
+            <TextField fx:id="nameField" promptText="Name" />
+            <TextField fx:id="priceField" promptText="Price" />
+            <TextField fx:id="quantityField" promptText="Quantity" />
+            <Button text="Add" onAction="#handleAdd" />
+            <Button text="Delete" onAction="#handleDelete" />
+            <Button text="Calculate Total" onAction="#handleCalculateTotal" />
+        </HBox>
+    </bottom>
+</BorderPane>
