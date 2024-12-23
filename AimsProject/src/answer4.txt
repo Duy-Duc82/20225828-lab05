@@ -1,0 +1,17 @@
+11
+1.Tính đa hình trong Java (Polymorphism):
+
+ -toString() là một phương thức được định nghĩa trong lớp Object, và tất cả các lớp trong Java đều kế thừa lớp Object.
+ -Khi bạn gọi toString() trên một đối tượng thuộc danh sách mediaList, Java sẽ tìm phương thức toString() phù hợp nhất trong lớp thực tế của đối tượng đó (class thực tế tại runtime, không phải class tham chiếu tại compile time).
+ -Điều này có nghĩa là, nếu đối tượng thuộc lớp con (Book, DigitalVideoDisc), thì phương thức toString() của lớp con sẽ được gọi.
+2.Kết quả hiển thị:
+
+ -Mỗi đối tượng trong danh sách sẽ in ra thông tin dựa trên định nghĩa phương thức toString() của lớp thực tế.
+12
+1.Lớp Media nên implement interface Comparable vì đây là lớp cha của các loại phương tiện như CD, DVD, Book.
+
+2.Phương thức compareTo() trong lớp Media có thể được implement để so sánh theo thứ tự: đầu tiên là title, nếu title giống nhau thì so sánh theo cost.
+
+3.Không, khi sử dụng Comparable, chỉ có thể có một quy tắc sắp xếp duy nhất. Nếu muốn nhiều quy tắc sắp xếp, bạn cần dùng Comparator.
+
+4.Để DVD có quy tắc sắp xếp khác với các loại phương tiện khác, bạn cần override phương thức compareTo() trong lớp DVD, kiểm tra xem đối tượng có phải là DVD không, sau đó so sánh theo title, chiều dài giảm dần và cuối cùng là cost.
